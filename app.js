@@ -3,10 +3,10 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
 
-import userRouter from './routes/user-route';
-import adminRouter from './routes/admin-routes';
-import movieRouter from './routes/movie-routes';
-import bookingsRouter from './routes/booking-routes';
+import userRouter from './routes/user-route.js';
+import adminRouter from './routes/admin-routes.js';
+import movieRouter from './routes/movie-routes.js';
+import bookingsRouter from './routes/booking-routes.js';
 
 const PORT = process.env.PORT || 7080 
 dotenv.config();
