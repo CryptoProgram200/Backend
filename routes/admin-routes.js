@@ -3,9 +3,9 @@ import { addAdmin, adminLogin, getAdminById, getAdmins } from "../controllers/ad
 
 const adminRouter = express.Router();
 
+adminRouter.get("/", getAdmins);
 adminRouter.post("/signup", addAdmin);
 adminRouter.post("/login", adminLogin);
-adminRouter.get("/", getAdmins);
 adminRouter.get("/:id", getAdminById);
 
 export default adminRouter;

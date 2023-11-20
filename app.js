@@ -8,6 +8,7 @@ import adminRouter from './routes/admin-routes';
 import movieRouter from './routes/movie-routes';
 import bookingsRouter from './routes/booking-routes';
 
+const PORT = process.env.PORT || 7080 
 dotenv.config();
 const app = express();
 app.use(express.json());
@@ -21,7 +22,7 @@ app.use("/booking", bookingsRouter)
 mongoose.connect(
     `${process.env.MONGO_URL}`
 ).then(() => {
-    app.listen(7080, () => {
+    app.listen(PORT, () => {
         console.log("Connected to Mongo Database")
     })
 }).catch((e) => console.log(e));
